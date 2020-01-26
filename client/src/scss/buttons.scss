@@ -1,0 +1,31 @@
+@mixin button($forecolor, $backcolor, $bordercolor) {
+	border-radius: 5px;
+	padding: .5rem 2rem .6rem 2rem;
+	font-size: 1.3rem;
+	text-decoration: none;
+	background-color: $backcolor;
+	border: 2px solid $bordercolor;
+	color: $forecolor;
+	margin: .5rem;
+	cursor: pointer;
+	transition: background-color .5s;
+	&:visited {
+		color: $forecolor;
+	}
+	&:hover {
+		background-color: $forecolor;
+		color: $backcolor;
+	}
+	&:active {
+		background-color: $backcolor;
+		color: $forecolor;
+	}
+}
+
+.listen-button {
+	@include button($background, $foreground, $foreground);
+}
+
+.scream-button {
+	@include button($foreground, $background, $foreground);
+}

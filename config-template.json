@@ -1,0 +1,11 @@
+{
+	"mongo": {
+		"name": "", // Database name
+		"URI": "" // MongoDB connection string
+	},
+	"scream_ttl": "", // Time-to-live of screams in the database, in milliseconds; "null" if screams should live forever
+	"port": "", // Port to run the server on
+	"env": "", // "development" or "production"
+	"sessionSecret" : "", // Secret for signing session cookies
+	"bcrypt_rounds": "" // Number of rounds to use when hashing admin passwords
+}
