@@ -50,11 +50,11 @@ router.get('/screamcount', async (req, res, next) => {
 //Gets all screams in the screams collection (requires session)
 router.get('/screams', async (req, res, next) => {
 	try {
-		/*if (!("user" in req.session)) {
+		if (!("user" in req.session)) {
 			res.status("403");
 			next(new Error());
 	   		return;
-		}*/
+		}
 		let result = await screamModel.getAllScreams();
 		res.status("200").json({success: true, result: result});
 	} catch(err) {
@@ -65,11 +65,11 @@ router.get('/screams', async (req, res, next) => {
 //Deletes a set of screams from the screams collection (requires session)
 router.delete('/screams', async (req, res, next) => {
 	try {
-		/*if (!("user" in req.session)) {
+		if (!("user" in req.session)) {
 			res.status("403");
 			next(new Error());
 	   		return;
-		}*/
+		}
 		if (!req.body.screamIds || typeof req.body.screamIds !== "object") {
 			res.status("400");
 			next(new Error());
