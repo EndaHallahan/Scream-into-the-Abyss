@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Switch, Route } from "react-router-dom";
-import Helmet from "react-helmet";
 import './scss/index.scss';
 
 import Home from "./views/Home.js";
@@ -15,13 +14,6 @@ class App extends Component {
   		return (
   			<Route render={({location}) => (
   				<div className="App"> 
-  					<Helmet>
-		                <meta charSet="utf-8" />
-		                <meta name="description" content="Scream into the Abyss" />
-		                <meta name="keywords" content="scream, into, the, abyss, void, message" />
-		                <meta name="author" content="RB Underwood" />
-		                <title>The Abyss</title>
-		            </Helmet>
 			    	<TransitionGroup>
 				    	<CSSTransition 
 				    		timeout={{enter: 300, exit: 300}} 

@@ -66,6 +66,12 @@ app.use(cookieParser(config.sessionSecret, {}));
 
 app.use(bodyParser.json());
 
+//The Clacks
+app.use(function (req, res, next) {
+  res.set('X-Clacks-Overhead', 'GNU Terry Pratchet');
+  next();
+});
+
 //Routes
 app.use('/api', api);
 app.use('/admin', admin);

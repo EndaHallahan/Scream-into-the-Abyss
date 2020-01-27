@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Helmet from "react-helmet";
 import Cube from "../components/Cube.js";
 
 class Home extends Component {
 	render() {
 		return (
 			<div>
+				<Helmet>
+	                <title>The Abyss</title>
+	            </Helmet>
 				<Cube />
 				<div className="abyssal">
 					
